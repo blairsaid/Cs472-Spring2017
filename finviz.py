@@ -11,6 +11,7 @@
 
 from html.parser import HTMLParser
 import requests
+import re
 
 
 # HTMLParser parsers the input feed into a parse tree
@@ -49,7 +50,32 @@ parser = FinvizParser()
 # and then visit the nodes in a single function call.
 parser.feed(finvizhome)
 
-# print out the urls encountered in html, hopefully
-parser.printURLs()
+#urls = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+{}]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+',finvizhome)
 
+# print out the urls encountered in html, hopefully
+#parser.printURLs()
+
+
+# Filter through the urls from the <a> tags and only look for ones with http[s]
+# because they are external to finviz.com
+externalnews= []
+for i in parser.urls:
+    if re.match('http[s]?',i) != None  and re.search('news',i) != None:
+        externalnews.append(i)
+
+
+# Filter the urls by site
+marketwatch = []
+bloomberg = []
+wsj = []
+bbc = []
+for i in externalnews:
+    if re.search('www.bloomberg.com',i) != None:
+        bloomberg.append(i)
+    elif re.search('www.marketwatch.com',i) != None:
+        marketwatch.append(i)    
+    elif re.search('www.wsj.com',i) != None:
+        wsj.append(i)        
+    elif re.search('www.bbc.co.uk',i) != None:
+        bbc.append(i)
 
