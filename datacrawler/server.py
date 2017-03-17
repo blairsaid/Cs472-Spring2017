@@ -2,12 +2,14 @@ import time
 from intriniofinance import IntrinioFinance
 from dbInterface import dbInterface
 from clientinterface import ClientInterface
+from config import Config
 
 class Server():
-    def __init__(self):
+    def __init__(self,cf):
         # all this stuff can be based on some sort of config file
+        self.config = cf
         self.looplength = 5
-        self.crawlers = [ IntrinioFinance("apikey",5) ] # an array of all our web crawlers
+        self.crawlers = [IntrinioFinance(cf.apiUID,cf.apiPW,int(cf.intrinioLimit))] # an array of all our web crawlers
         self.dbIf= dbInterface() # sends all the commands to the mysql server
         self.client = ClientInterface(self) # client is passed a reference to the server so it may extract the necessary information
         
@@ -25,8 +27,6 @@ class Server():
 
             print("\n")
 
-            # tell a crawler to begin making a request
-            # not necessarily one request, an entire chain that results in data input to the database
             if(self.crawlers[i].isAvailable()):
                 results = self.crawlers[i].makeRequest()
                 self.dbIf.sendData(results)

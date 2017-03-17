@@ -1,0 +1,3 @@
+apiuid = 45f892319c97bc6b70f7d2dbae8f75a7
+apipw = 8b76e508ab8f803bc4e2158194c85ccc
+intrinioLimit = 1
