@@ -1,0 +1,3 @@
+apiuid = "YOUR_INTRINIO_API_USERNAME"
+apipw = "YOUR_INTRINIO_API_PASSWORD" 
+intrinioLimit = 1
