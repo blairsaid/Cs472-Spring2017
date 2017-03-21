@@ -1,3 +1,5 @@
-apiuid = "YOUR_INTRINIO_API_USERNAME"
-apipw = "YOUR_INTRINIO_API_PASSWORD" 
+apiuid = your_api_uid
+apipw = your_api_pw 
 intrinioLimit = 1
+mysqluid = ec2-user
+mysqlpw = password
