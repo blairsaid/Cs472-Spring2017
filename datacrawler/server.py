@@ -6,11 +6,11 @@ from config import Config
 
 class Server():
     def __init__(self,cf):
-        # all this stuff can be based on some sort of config file
         self.config = cf
-        self.looplength = 5
-        self.dbIf= dbInterface(cf.dbUID,cf.dbPW,cf.dbHost) # sends all the commands to the mysql server
-        self.crawlers = [IntrinioFinance(cf.apiUID,cf.apiPW,int(cf.intrinioLimit),self.dbIf)] # an array of all our web crawlers
+        self.looplength = 3
+        self.dbIf= dbInterface(cf.dbUID,cf.dbPW,cf.dbHost) 
+        self.crawlers = [] # an array of all our web crawlers
+        self.crawlers.append(IntrinioFinance(cf.apiUID,cf.apiPW,int(cf.intrinioLimit),self.dbIf))
         self.client = ClientInterface(self) # client is passed a reference to the server so it may extract the necessary information
         
         

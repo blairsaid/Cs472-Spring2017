@@ -3,6 +3,8 @@ import requests
 import time
 import json
 
+
+# TODO make this use intrinios credit count instead of the number of get requests
 class IntrinioFinance(Crawler):
     def __init__(self,apiUID,apiPW,reqLimit,dbInterface):
         self.reqLimit = reqLimit
@@ -29,7 +31,6 @@ class IntrinioFinance(Crawler):
         ldrDecode = json.loads(ldrBrdJS)
 
         # Send the data to the database
-        # TODO this will likely need to be changed
         self.dbIf.sendLdrBrd(ldrDecode["data"])
 
     # TODO rate limit this later, maybe no more than once every 5 seconds?

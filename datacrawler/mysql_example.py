@@ -14,6 +14,10 @@ query = ("SELECT * FROM leaderboard")
 cursor.execute(query)
 
 for i in cursor:
+    print(i[0])
+    print(i[1])
+    print(i[2])
+    print("")
     print(i)
 
 cursor.close()

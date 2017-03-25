@@ -1,5 +1,6 @@
-apiuid = your_api_uid
-apipw = your_api_pw 
+apiuid = your_intrinio_user_id
+apipw = your_intrinio_api_password 
 intrinioLimit = 1
 mysqluid = ec2-user
 mysqlpw = password
+mysqlhost = 127.0.0.1
