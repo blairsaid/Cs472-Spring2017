@@ -19,7 +19,7 @@ class dbInterface():
         # TODO 'oustandingshares', fix in the database
         add_stock = ("INSERT INTO leaderboard "
                     "(ticker, volume, price, percentchange, oustandingshares) "
-                    "VALUES (%s, %s, %s, %s, %s)")
+                    "VALUES ($%s, %s, %s, %s, %s)")
 
         for row in data:
             data_stock = (row["ticker"],str(row["volume"]),str(row["open_price"]),str(row["percent_change"]),str(row["weightedavebasicsharesos"]))
