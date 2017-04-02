@@ -28,4 +28,9 @@ class dbInterface():
         cnx.commit()
         cursor.close()
         cnx.close()
-            
+
+    # TODO finish this
+    def sendPressData(self,data):
+        print("RSS test START:")
+        print(data)
+        print("RSS test END:")
