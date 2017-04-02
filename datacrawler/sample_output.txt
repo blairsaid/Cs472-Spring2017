@@ -1,0 +1,88 @@
+Beginning RSS Crawl.
+
+Retrieving RSS Feed.
+
+Beginning Article Crawl.
+
+Article START
+Article #: 0
+Title:  Youth arrested in sexual assault of Chicago teen seen on Facebook Live
+Link:  http://feeds.reuters.com/~r/reuters/companyNews/~3/ywnpgGn770I/chicago-violence-facebook-idUSL2N1HA03C
+Keywords:
+Keyword Match:  ['New']
+Article END
+
+Article START
+Article #: 1
+Title:  Ethical investment tide lifts 'greenwash' concerns
+Link:  http://feeds.reuters.com/~r/reuters/companyNews/~3/uCqgxQf1wVY/investment-ethics-idUSL3N1GX1YY
+Keywords:
+Keyword Match:  ['Investors']
+Keyword Match:  ['New']
+Keyword Match:  ['New']
+Article END
+
+Article START
+Article #: 2
+Title:  Fox, Bill O'Reilly settle claims with five women -New York Times
+Link:  http://feeds.reuters.com/~r/reuters/companyNews/~3/x0vsTwNdhBQ/twenty-firstfox-oreilly-idUSL2N1H90F2
+Keywords:
+Keyword Match:  ['New']
+Keyword Match:  ['New']
+Keyword Match:  ['New']
+Article END
+
+Article START
+Article #: 3
+Title:  Ireland says no sign of mechanical fault in fatal Sikorsky helicopter crash
+Link:  http://feeds.reuters.com/~r/reuters/companyNews/~3/jJhv8E4q78o/ireland-crash-sikorsky-idUSL5N1H90J1
+Keywords:
+Article END
+
+Article START
+Article #: 4
+Title:  UPDATE 1-Ford recalls F-250 pickups that could roll while in park
+Link:  http://feeds.reuters.com/~r/reuters/companyNews/~3/IGz36LW5WIs/ford-motor-recall-idUSL2N1H90G6
+Keywords:
+Keyword Match:  ['New']
+Article END
+
+Article START
+Article #: 5
+Title:  Ford recalls F-250 pickups that could roll while in park
+Link:  http://feeds.reuters.com/~r/reuters/companyNews/~3/dmaraCC3S7w/ford-motor-recall-idUSL2N1H90F7
+Keywords:
+Keyword Match:  ['New']
+Article END
+
+Article START
+Article #: 6
+Title:  UPDATE 1-Peru finmin says flood damages merit wider fiscal gap
+Link:  http://feeds.reuters.com/~r/reuters/companyNews/~3/aXc8dcUUDrM/peru-economy-floods-idUSL2N1H90BC
+Keywords:
+Keyword Match:  ['New']
+Article END
+
+Article START
+Article #: 7
+Title:  CORRECTED-German prosecutors expect rulings in VW scandal this year - report
+Link:  http://feeds.reuters.com/~r/reuters/companyNews/~3/7rRdtP6AbTE/volkswagen-emissions-prosecutors-idUSL5N1H9099
+Keywords:
+Keyword Match:  ['New']
+Article END
+
+Article START
+Article #: 8
+Title:  Top official in S.Africa's ANC has "reservations" over Gordhan removal
+Link:  http://feeds.reuters.com/~r/reuters/companyNews/~3/GebCYH7k_dc/safrica-politics-anc-idUSJ8N1GY01W
+Keywords:
+Keyword Match:  ['New']
+Article END
+
+Article START
+Article #: 9
+Title:  Macau gambling revenue rises 18 pct in March as high rollers return
+Link:  http://feeds.reuters.com/~r/reuters/companyNews/~3/-pPKJrPjNXE/macau-gambling-revenues-idUSL3N1GE1RO
+Keywords:
+Article END
+
