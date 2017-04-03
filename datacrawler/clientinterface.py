@@ -13,13 +13,13 @@ class ClientInterface():
    
     # Check of a client is connecting to the unix socket
     def hasRequests(self):
-        print("Client has requested server information, waiting to be served.")
-        return True
-        # place holder
+#        return True
+#        print("Client has requested server information, waiting to be served.")
+        pass
 
     # Return the requested data to the client through the socket
     def processRequests(self):
-        time.sleep(1)
-        print("Processing client information requests")
-        # place holder
+        #time.sleep(1)
+        #print("Processing client information requests")
+        pass
     

@@ -43,13 +43,21 @@ class RSSCrawler(Crawler):
             # Keyword paragraph tag search
             parser = Pparser(self.kw_list)
             parser.feed(story_text)  
+            data = []
             if(len(parser.hits) > 0):
-                story_data = {"title":story.title,"url":story.link,
-                            "time":t_stamp,"ticker":"stub",
-                            "open_price":"stub","description":"stub",
-                            "matchs":str(parser.hits)}
-                
-                self.dbIf.sendPressData(story_data)
+                tmp = ""
+                for kw in parser.hits:
+                    tmp = tmp + kw + ","
+
+                story_data = {"ticker":"stub","title":story.title,"url":story.link,
+                            "url":story.link,"time":t_stamp,
+                            "open_price":0.0,"description":"stub",
+                            "matchs":tmp}
+                data.append(story_data)    
+            
+            if(len(parser.hits) > 0):
+                self.dbIf.sendPressData(data)
+
             parser.close()
 
 

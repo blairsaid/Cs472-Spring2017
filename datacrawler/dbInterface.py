@@ -8,7 +8,7 @@ class dbInterface():
     # TODO add error checking for db conenction and data input
     # TODO execute the commands atomically somehow
     def sendLdrBrd(self,data):
-        print("sending sql cmd to database")
+        print("sending leaderboard data to database.")
         cnx = mysql.connector.connect(**self.dbconfig) 
         cursor = cnx.cursor()
 
@@ -16,10 +16,9 @@ class dbInterface():
         cursor.execute(clrcmd)
 
         # Template for adding stock data
-        # TODO 'oustandingshares', fix in the database
         add_stock = ("INSERT INTO leaderboard "
-                    "(ticker, volume, price, percentchange, oustandingshares) "
-                    "VALUES ($%s, %s, %s, %s, %s)")
+                    "(ticker, volume, price, pct_change, os_shares) "
+                    "VALUES (%s, %s, %s, %s, %s)")
 
         for row in data:
             data_stock = (row["ticker"],str(row["volume"]),str(row["open_price"]),str(row["percent_change"]),str(row["weightedavebasicsharesos"]))
@@ -31,6 +30,20 @@ class dbInterface():
 
     # TODO finish this
     def sendPressData(self,data):
-        print("RSS test START:")
-        print(data)
-        print("RSS test END:")
+        print("sending press data to database.")
+        cnx = mysql.connector.connect(**self.dbconfig) 
+        cursor = cnx.cursor()
+
+        add_press = ("INSERT INTO pressboard "
+                    "(ticker, title, url, time, open_price, description) "
+                    " VALUES (%s, %s, %s, %s, %s, %s)")
+
+        for row in data:
+            data_press = (row["ticker"],row["title"],row["url"],str(row["time"]),str(row["open_price"]),str(row["description"]))
+            cursor.execute(add_press,data_press)
+
+        cnx.commit()
+        cursor.close()
+        cnx.close()
+
+

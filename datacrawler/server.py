@@ -1,6 +1,5 @@
 from config import Config
 
-
 # Crawlers:
 from intriniofinance import IntrinioFinance
 from rsscrawler import RSSCrawler
@@ -21,7 +20,7 @@ class Server():
 
         # Crawler initiation:
         self.crawlers = []
-#        self.crawlers.append(IntrinioFinance(cf.apiUID,cf.apiPW,int(cf.intrinioLimit),self.dbIf))
+        self.crawlers.append(IntrinioFinance(cf.apiUID,cf.apiPW,int(cf.intrinioLimit),self.dbIf))
         self.crawlers.append(RSSCrawler("http://feeds.marketwatch.com/marketwatch/realtimeheadlines/",1,self.dbIf))
         self.crawlers.append(RSSCrawler("https://www.bloomberg.com/view/rss",1,self.dbIf))
         self.crawlers.append(RSSCrawler("https://feeds.feedburner.com/MarketFolly",1,self.dbIf))
@@ -36,16 +35,20 @@ class Server():
 
         print("Starting server main loop\n")
 
-        # maybe include something so the server only runs from 4am-7am
-        while(True):
+        # TODO include something so the server only runs from 4am-7am
+        #while(True):
+        while(i < len(self.crawlers)):
             # process all the client requests before continuing crawling
             if(self.client.hasRequests()):
                 self.client.processRequests()
-            print("\n")
+#            print("\n")
             if(self.crawlers[i].isAvailable()):
                 results = self.crawlers[i].makeRequest()
-            print("\n")
+#            print("\n")
+
+            #TODO make this better
             time.sleep(self.looplength) # just to slow things down for now, because ec2 micro instances suck
-            i = (i+1) % len(self.crawlers) # loop through the crawlers indefinitely
+            #i = (i+1) % len(self.crawlers) # loop through the crawlers indefinitely
+            i = i+1
 
         # any sort of final logging should be done here

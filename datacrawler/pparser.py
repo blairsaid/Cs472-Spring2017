@@ -19,7 +19,7 @@ class Pparser(KeywordParser):
         if(self.in_p_tag):
             self.paragraphs.append(data)
             hits = self.keyword_search(data)
+
             if(len(hits) > 0):
-                self.hits.append(hits)
-
-
+                for tmp in hits:
+                    self.hits.append(tmp)

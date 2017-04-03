@@ -1,5 +1,6 @@
 from html.parser import HTMLParser
 
+#TODO make this work with regular expressions
 class KeywordParser(HTMLParser):
     def __init__(self,keywords):
         HTMLParser.__init__(self)
