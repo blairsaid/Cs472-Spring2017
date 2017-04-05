@@ -14,210 +14,68 @@ class LeaderboardViewController: UIViewController, UICollectionViewDelegate, UIC
     
     let menuManager = MenuManager()
     
-    var financeData = [LeaderboardData]() /* financeData is our array of objects; it is the data used to fill our collection view */
-    //var financeData: [LeaderboardData] = []
-    /*
-    struct Leaderboard {
-        
-        var ticker: String?
-        var volume: String?
-        var price: String?
-        var percentChange: String?
-        var weightedavebasicsharesos: String?
-        
-        /*
-         This is our constructor for the LeaderboardData class; we will use an array of LeaderboardData objects to fill spreadsheet
-         */
-        
-        init(ticker: String, volume: String, price: String, percentChange: String, weightedavebasicsharesos: String) {
-            self.ticker = ticker
-            self.volume = volume
-            self.price = price
-            self.percentChange = percentChange
-            self.weightedavebasicsharesos = weightedavebasicsharesos
-        }
-    }
-
-    var financeData: [Leaderboard] = []
-    */
-    /* The following 5 arrays will be used to create our placeholder data */
-    var ticker = ["Ticker",
-                  "AFMD",
-                  "APHB",
-                  "AREX",
-                  "ATRA",
-                  "AUPH",
-                  "AUY",
-                  "BLPH",
-                  "BOTA",
-                  "BPMC",
-                  "BPT",
-                  "BTG",
-                  "CATB",
-                  "CERCU",
-                  "CERU",
-                  "CMCM"]
-    var volume = ["Volume",
-                  "1260338",
-                  "270907",
-                  "2753315",
-                  "633561",
-                  "21892009",
-                  "13391995",
-                  "1600302",
-                  "848395",
-                  "753020",
-                  "507114",
-                  "5144799",
-                  "59565706",
-                  "4471709",
-                  "1893181",
-                  "2947477"]
-    var price = ["Price",
-                 "2.75",
-                 "4.75",
-                 "2.39",
-                 "21",
-                 "8.50",
-                 "2.64",
-                 "1.71",
-                 "8",
-                 "39.32",
-                 "2.99",
-                 "2.04",
-                 "1.34",
-                 "1.78",
-                 "1.29",
-                 "11.52"]
-    var percentChage = ["Percent Change",
-                        "0.1224",
-                        "0.0532",
-                        "0.0814",
-                        "0.12",
-                        "0.0925",
-                        "0.0522",
-                        "0.0559",
-                        "0.1599",
-                        "0.0853",
-                        "0.0955",
-                        "0.0755",
-                        "0.5338000000000001",
-                        "0.6438",
-                        "0.0857",
-                        "0.1414"]
-    var weiAveShares = ["Weight Ave Shares",
-                        "0",
-                        "11120394",
-                        "41610083",
-                        "28732000",
-                        "0",
-                        "0",
-                        "13854188",
-                        "38640487",
-                        "27492000",
-                        "0",
-                        "0",
-                        "15512608",
-                        "8756393",
-                        "27383376",
-                        "0"]
+    var financeData: [LeaderboardData] = []
     
     /*
         This function will be used to fetch our data from the json
     */
     func fetchData() {
-        //self.financeData = [LeaderboardData]()
-        
-        //data necessary to authenticate into intrino json
-        let username = "5e793958db70094110ff45acb40ba08c"
-        let password = "6847a450d5fc4e4109e352bb8196b6c7"
-        let loginString = String.init(format: "%@:%@", arguments: [username, password])
-        let loginData = loginString.data(using: String.Encoding.utf8)!
-        let base64LoginString = loginData.base64EncodedString()
-        
-        //create the request
-        let url = URL(string: "https://api.intrinio.com/securities/search?conditions=volume~gte~250000,percent_change~gte~.05,weightedavebasicsharesos~lte~50000000")
-        var request = URLRequest(url: url!)
-        request.httpMethod = "GET"
-        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
-        //let urlConnection = NSURLConnection(request: request, delegate: self)
-        let config = URLSessionConfiguration.default
-        let authString = "Basic \(base64LoginString)"
-        config.httpAdditionalHeaders = ["Authorization": authString]
-        
-        //log into api with authentication and access json
-        let session = URLSession(configuration: config)
-        session.dataTask(with: url!) { (data: Data?, response: URLResponse?, error: Error?) in
+        let url = URL(string: "http://ec2-54-201-191-25.us-west-2.compute.amazonaws.com/cgi-bin/leaderboard.py")
+        let task = URLSession.shared.dataTask(with: url!) {(data: Data?, response: URLResponse?, error: Error?) in
             if error != nil {
                 print("Error")
             } else {
+                self.financeData = [LeaderboardData]()
                 if let content = data {
                     do {
-                        //Create our json object within the app
-                        let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String: AnyObject]
-                        print(myJson) //prints the whole json file
+                        //Array
+                        let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as? [[String: String]]
+                        /*
+                        //debugging information
+                        print(myJson!)
+                        print(myJson!.count)
+                        */
                         
-                        if let financialDataFromJson = myJson["data"] as? [[String: AnyObject]] {
-                            print(financialDataFromJson) //prints the data array within the json
-                            
-                            //var count: Int = 0
-                            for datafromJson in financialDataFromJson {
-                                //let myData = LeaderboardData() /* instance used to create our Leaderboard object */
-                                //var myData = [LeaderboardData]()
+                        //place section titles
+                        let titleData = LeaderboardData()
+                        titleData.ticker = "Ticker"
+                        titleData.percentChange = "Percent Change"
+                        titleData.price = "Price"
+                        titleData.weightedavebasicsharesos = "OS Shares"
+                        titleData.volume = "Volume"
+                        self.financeData.append(titleData)
+                        
+                        for items in myJson! {
+                            let finance = LeaderboardData()
+                            if let ticker = items["ticker"], let osShares = items["os_shares"], let volumes = items["volume"], let price = items["price"], let pctChange = items["pct_change"] {
                                 
-                                //if let ticker = dataFromJson["ticker"] as? String
-                                if let ticker = datafromJson["ticker"] as? String, let volume = datafromJson["volume"] as? String, let percentChange = datafromJson["percent_change"] as? String, let weightedavebasicsharesos = datafromJson["weightedavebasicsharesos"] as? String {
-                                    //print(ticker) //prints each ticker
-                                    
-                                    /* These calls were made without a default constructor */
-                                    //myData.ticker = ticker
-                                    //myData.volume = volume
-                                    //myData.percentChange = percentChange
-                                    //myData.weightedavebasicsharesos = weightedavebasicsharesos
-                                    
-                                    
-                                    /* This call creates our LeaderboardData object */
-                                    let myData = LeaderboardData(ticker: ticker, volume: volume, price: "0", percentChange: percentChange, weightedavebasicsharesos: weightedavebasicsharesos)
-                                    
-                                    //let myData = LeaderboardData(ticker: "AAPL", volume: "250000", price: "145.54", percentChange: "0.025", weightedavebasicsharesos: "300000")
-                                    
-                                    print(ticker) //prints each ticker
-                                    print(myData.ticker!)
-                                    //print(myData.volume!) //prints each ticker
-                                    
-                                    /* Each time want to append our instance into financeData array */
-                                    self.financeData.append(myData)
-                                    //print(self.financeData.count)
-                                }
-                                //count = count + 1
-                                //self.financeData.append(myData)
+                                finance.ticker = ticker
+                                finance.percentChange = pctChange
+                                finance.price = price
+                                finance.weightedavebasicsharesos = osShares
+                                finance.volume = volumes
+                                
+                                /*
+                                //debugging information
+                                print("ticker: \(finance.ticker)")
+                                print("os_shares: \(finance.weightedavebasicsharesos)")
+                                print("volume: \(finance.volume)")
+                                print("price: \(finance.price)")
+                                print("pct_change: \(finance.percentChange)")
+                                */
                             }
+                            self.financeData.append(finance)
                         }
-                        DispatchQueue.main.async {
+                        DispatchQueue.main.sync {
                             self.myCollectionView.reloadData()
                         }
                     } catch {
-                        print(error)
+                        print("error")
                     }
                 }
             }
-            }
-            .resume()
-    }
-    /*
-        This function creates our placeholder data (based on our arrays, we will create 16 objects within our financeData array
-    */
-    //create arbitrary items for data set
-    func createitems() -> [LeaderboardData] {
-        var items = [LeaderboardData]()
-        
-        var count: Int = 0
-        for _ in ticker {
-            items.append(LeaderboardData(ticker: ticker[count], volume: volume[count], price: price[count], percentChange: percentChage[count], weightedavebasicsharesos: weiAveShares[count]))
-            count = count + 1
         }
-        
-        return items
+        task.resume()
     }
     
     /*
@@ -225,8 +83,8 @@ class LeaderboardViewController: UIViewController, UICollectionViewDelegate, UIC
      */
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        //return self.financeData.count
-        return 5
+        return self.financeData.count
+        //return 5
     }
     
     /*
@@ -234,8 +92,8 @@ class LeaderboardViewController: UIViewController, UICollectionViewDelegate, UIC
      */
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
-        return self.financeData.count
-        //return 16
+        //return self.financeData.count
+        return 5
     }
     
     /*
@@ -253,7 +111,7 @@ class LeaderboardViewController: UIViewController, UICollectionViewDelegate, UIC
         cell.layer.borderWidth = 1
         cell.layer.borderColor = UIColor.black.cgColor
         
-        if indexPath.section == 0 {
+        if indexPath.row == 0 {
             //set the background and text color for the labels
             cell.backgroundColor = UIColor.darkGray
             cell.myLabel?.textColor = UIColor.white
@@ -264,16 +122,16 @@ class LeaderboardViewController: UIViewController, UICollectionViewDelegate, UIC
         }
         
         //set the label for each cell
-        if indexPath.row == 0 {
-            cell.myLabel.text = financeData[indexPath.section].ticker
-        } else if indexPath.row == 1 {
-            cell.myLabel.text = financeData[indexPath.section].volume
-        } else if indexPath.row == 2 {
-            cell.myLabel.text = financeData[indexPath.section].price
-        } else if indexPath.row == 3 {
-            cell.myLabel.text = financeData[indexPath.section].percentChange
+        if indexPath.section == 0 {
+            cell.myLabel.text = financeData[indexPath.row]?.ticker
+        } else if indexPath.section == 1 {
+            cell.myLabel.text = financeData[indexPath.row]?.volume
+        } else if indexPath.section == 2 {
+            cell.myLabel.text = financeData[indexPath.row]?.price
+        } else if indexPath.section == 3 {
+            cell.myLabel.text = financeData[indexPath.row]?.percentChange
         } else {
-            cell.myLabel.text = financeData[indexPath.section].weightedavebasicsharesos
+            cell.myLabel.text = financeData[indexPath.row]?.weightedavebasicsharesos
         }
         
         return cell
@@ -288,8 +146,6 @@ class LeaderboardViewController: UIViewController, UICollectionViewDelegate, UIC
         // Do any additional setup after loading the view.
         
         fetchData() //load the JSON data into the collection view
-        
-        financeData = createitems() //load placeholder data into the collection view
         
         self.automaticallyAdjustsScrollViewInsets = false
     }
