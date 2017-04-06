@@ -4,7 +4,8 @@ import time
 # Abstract class
 
 class Crawler():
-    def __init__(self):
+    def __init__(self,domain):
+        self.domain = domain
         self.getCount = 0 # total number of get requests made by the crawler
         self.last_request_time = time.time()
 

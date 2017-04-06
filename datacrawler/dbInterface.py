@@ -2,14 +2,18 @@ import mysql.connector
 import time
 
 class dbInterface():
-    def __init__(self,uid,pw,host):
-        self.dbconfig = {"user": uid,"password": pw,"host": host,"database": "fltr"}
+    dbconfig = {}
+    def setDBConfig(uid,pw,host):
+        dbInterface.dbconfig["user"] = uid
+        dbInterface.dbconfig["password"] = pw
+        dbInterface.dbconfig["host"] = host
+        dbInterface.dbconfig["database"] = "fltr"
 
     # TODO add error checking for db conenction and data input
     # TODO execute the commands atomically somehow
-    def sendLdrBrd(self,data):
+    def sendLdrBrd(data):
         print("sending leaderboard data to database.")
-        cnx = mysql.connector.connect(**self.dbconfig) 
+        cnx = mysql.connector.connect(**dbInterface.dbconfig) 
         cursor = cnx.cursor()
 
         clrcmd = "DELETE FROM leaderboard;"
@@ -28,10 +32,10 @@ class dbInterface():
         cursor.close()
         cnx.close()
 
-    # TODO finish this
-    def sendPressData(self,data):
+    def sendPressData(data):
         print("sending press data to database.")
-        cnx = mysql.connector.connect(**self.dbconfig) 
+
+        cnx = mysql.connector.connect(**dbInterface.dbconfig) 
         cursor = cnx.cursor()
 
         add_press = ("INSERT INTO pressboard "
