@@ -1,0 +1,642 @@
+Starting server main loop
+
+sending press data to database.
+Title:  To improve your productivity, paint your office this color (it’s scientifically proven)
+URL:  http://www.marketwatch.com/story/scientists-developed-these-colors-for-offices-to-make-employees-more-productive-2017-03-31
+Ticker:  UN,FB
+Date:  Apr-6-2017
+Keyword matchs:  New-Receives-New-New
+
+
+Title:  America’s best and worst airline? Depends on what you’re looking for
+URL:  http://www.marketwatch.com/story/americas-best-and-worst-airline-depends-on-what-youre-looking-for-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-New-Receives-New-New
+
+
+Title:  The American Dream appears to be more attainable in Mexico and China
+URL:  http://www.marketwatch.com/story/nearly-half-of-all-millennials-living-in-this-state-own-a-home-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-Primary-Receives-New-New
+
+
+Title:  This is how many people smoking still kills every year
+URL:  http://www.marketwatch.com/story/this-is-how-many-people-smoking-still-kills-every-year-2017-04-06
+Ticker:  RAI,PM,BTI,IMB
+Date:  Apr-6-2017
+Keyword matchs:  New-FDA-Receives
+
+
+Title:  Amazon will create 30,000 part-time jobs, but millions of Americans are desperate to work full-time
+URL:  http://www.marketwatch.com/story/amazon-will-create-30000-part-time-jobs-but-american-workers-are-desperate-to-work-full-time-2017-04-06
+Ticker:  AMZN
+Date:  Apr-6-2017
+Keyword matchs:  Increase-Increase-Increase-Increase-Receives
+
+
+Title:  The Wall Street Journal: Azul IPO suspended by Brazil’s market regulators
+URL:  http://www.marketwatch.com/story/azul-ipo-suspended-by-brazils-market-regulators-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  The Wall Street Journal: Lehman floats RMBS settlement worth at least $1 billion
+URL:  http://www.marketwatch.com/story/lehman-floats-rmbs-settlement-worth-at-least-1-billion-2017-04-06-18103526
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  4 things to know about the Okta IPO
+URL:  http://www.marketwatch.com/story/4-things-to-know-about-okta-before-it-goes-public-2017-03-20
+Ticker:  OKTA,GS,JPM,IBM,MSFT,SYMC,FOX,ADBE,MGM,TWLO,AMZN,GOOG,GOOGL,WDAY,MULE
+Date:  Apr-6-2017
+Keyword matchs:  Investors-New-New
+
+
+Title:  Key Words: Hillary Clinton: ‘As a person, I’m OK. As an American, I’m pretty worried’
+URL:  http://www.marketwatch.com/story/hillary-clinton-as-a-person-im-ok-as-an-american-im-pretty-worried-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New
+
+
+sending press data to database.
+Title:  To improve your productivity, paint your office this color (it’s scientifically proven)
+URL:  http://www.marketwatch.com/story/scientists-developed-these-colors-for-offices-to-make-employees-more-productive-2017-03-31
+Ticker:  UN,FB
+Date:  Apr-6-2017
+Keyword matchs:  New-Receives-New-New
+
+
+Title:  America’s best and worst airline? Depends on what you’re looking for
+URL:  http://www.marketwatch.com/story/americas-best-and-worst-airline-depends-on-what-youre-looking-for-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-New-Receives-New-New
+
+
+Title:  The American Dream appears to be more attainable in Mexico and China
+URL:  http://www.marketwatch.com/story/nearly-half-of-all-millennials-living-in-this-state-own-a-home-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-Primary-Receives-New-New
+
+
+Title:  This is how many people smoking still kills every year
+URL:  http://www.marketwatch.com/story/this-is-how-many-people-smoking-still-kills-every-year-2017-04-06
+Ticker:  RAI,PM,BTI,IMB
+Date:  Apr-6-2017
+Keyword matchs:  New-FDA-Receives
+
+
+Title:  Amazon will create 30,000 part-time jobs, but millions of Americans are desperate to work full-time
+URL:  http://www.marketwatch.com/story/amazon-will-create-30000-part-time-jobs-but-american-workers-are-desperate-to-work-full-time-2017-04-06
+Ticker:  AMZN
+Date:  Apr-6-2017
+Keyword matchs:  Increase-Increase-Increase-Increase-Receives
+
+
+Title:  The Wall Street Journal: Azul IPO suspended by Brazil’s market regulators
+URL:  http://www.marketwatch.com/story/azul-ipo-suspended-by-brazils-market-regulators-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  The Wall Street Journal: Lehman floats RMBS settlement worth at least $1 billion
+URL:  http://www.marketwatch.com/story/lehman-floats-rmbs-settlement-worth-at-least-1-billion-2017-04-06-18103526
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  4 things to know about the Okta IPO
+URL:  http://www.marketwatch.com/story/4-things-to-know-about-okta-before-it-goes-public-2017-03-20
+Ticker:  OKTA,GS,JPM,IBM,MSFT,SYMC,FOX,ADBE,MGM,TWLO,AMZN,GOOG,GOOGL,WDAY,MULE
+Date:  Apr-6-2017
+Keyword matchs:  Investors-New-New
+
+
+Title:  Key Words: Hillary Clinton: ‘As a person, I’m OK. As an American, I’m pretty worried’
+URL:  http://www.marketwatch.com/story/hillary-clinton-as-a-person-im-ok-as-an-american-im-pretty-worried-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New
+
+
+sending press data to database.
+Title:  To improve your productivity, paint your office this color (it’s scientifically proven)
+URL:  http://www.marketwatch.com/story/scientists-developed-these-colors-for-offices-to-make-employees-more-productive-2017-03-31
+Ticker:  UN,FB
+Date:  Apr-6-2017
+Keyword matchs:  New-Receives-New-New
+
+
+Title:  America’s best and worst airline? Depends on what you’re looking for
+URL:  http://www.marketwatch.com/story/americas-best-and-worst-airline-depends-on-what-youre-looking-for-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-New-Receives-New-New
+
+
+Title:  The American Dream appears to be more attainable in Mexico and China
+URL:  http://www.marketwatch.com/story/nearly-half-of-all-millennials-living-in-this-state-own-a-home-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-Primary-Receives-New-New
+
+
+Title:  This is how many people smoking still kills every year
+URL:  http://www.marketwatch.com/story/this-is-how-many-people-smoking-still-kills-every-year-2017-04-06
+Ticker:  RAI,PM,BTI,IMB
+Date:  Apr-6-2017
+Keyword matchs:  New-FDA-Receives
+
+
+Title:  Amazon will create 30,000 part-time jobs, but millions of Americans are desperate to work full-time
+URL:  http://www.marketwatch.com/story/amazon-will-create-30000-part-time-jobs-but-american-workers-are-desperate-to-work-full-time-2017-04-06
+Ticker:  AMZN
+Date:  Apr-6-2017
+Keyword matchs:  Increase-Increase-Increase-Increase-Receives
+
+
+Title:  The Wall Street Journal: Azul IPO suspended by Brazil’s market regulators
+URL:  http://www.marketwatch.com/story/azul-ipo-suspended-by-brazils-market-regulators-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  The Wall Street Journal: Lehman floats RMBS settlement worth at least $1 billion
+URL:  http://www.marketwatch.com/story/lehman-floats-rmbs-settlement-worth-at-least-1-billion-2017-04-06-18103526
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  4 things to know about the Okta IPO
+URL:  http://www.marketwatch.com/story/4-things-to-know-about-okta-before-it-goes-public-2017-03-20
+Ticker:  OKTA,GS,JPM,IBM,MSFT,SYMC,FOX,ADBE,MGM,TWLO,AMZN,GOOG,GOOGL,WDAY,MULE
+Date:  Apr-6-2017
+Keyword matchs:  Investors-New-New
+
+
+Title:  Key Words: Hillary Clinton: ‘As a person, I’m OK. As an American, I’m pretty worried’
+URL:  http://www.marketwatch.com/story/hillary-clinton-as-a-person-im-ok-as-an-american-im-pretty-worried-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New
+
+
+sending press data to database.
+Title:  To improve your productivity, paint your office this color (it’s scientifically proven)
+URL:  http://www.marketwatch.com/story/scientists-developed-these-colors-for-offices-to-make-employees-more-productive-2017-03-31
+Ticker:  UN,FB
+Date:  Apr-6-2017
+Keyword matchs:  New-Receives-New-New
+
+
+Title:  America’s best and worst airline? Depends on what you’re looking for
+URL:  http://www.marketwatch.com/story/americas-best-and-worst-airline-depends-on-what-youre-looking-for-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-New-Receives-New-New
+
+
+Title:  The American Dream appears to be more attainable in Mexico and China
+URL:  http://www.marketwatch.com/story/nearly-half-of-all-millennials-living-in-this-state-own-a-home-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-Primary-Receives-New-New
+
+
+Title:  This is how many people smoking still kills every year
+URL:  http://www.marketwatch.com/story/this-is-how-many-people-smoking-still-kills-every-year-2017-04-06
+Ticker:  RAI,PM,BTI,IMB
+Date:  Apr-6-2017
+Keyword matchs:  New-FDA-Receives
+
+
+Title:  Amazon will create 30,000 part-time jobs, but millions of Americans are desperate to work full-time
+URL:  http://www.marketwatch.com/story/amazon-will-create-30000-part-time-jobs-but-american-workers-are-desperate-to-work-full-time-2017-04-06
+Ticker:  AMZN
+Date:  Apr-6-2017
+Keyword matchs:  Increase-Increase-Increase-Increase-Receives
+
+
+Title:  The Wall Street Journal: Azul IPO suspended by Brazil’s market regulators
+URL:  http://www.marketwatch.com/story/azul-ipo-suspended-by-brazils-market-regulators-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  The Wall Street Journal: Lehman floats RMBS settlement worth at least $1 billion
+URL:  http://www.marketwatch.com/story/lehman-floats-rmbs-settlement-worth-at-least-1-billion-2017-04-06-18103526
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  4 things to know about the Okta IPO
+URL:  http://www.marketwatch.com/story/4-things-to-know-about-okta-before-it-goes-public-2017-03-20
+Ticker:  OKTA,GS,JPM,IBM,MSFT,SYMC,FOX,ADBE,MGM,TWLO,AMZN,GOOG,GOOGL,WDAY,MULE
+Date:  Apr-6-2017
+Keyword matchs:  Investors-New-New
+
+
+Title:  Key Words: Hillary Clinton: ‘As a person, I’m OK. As an American, I’m pretty worried’
+URL:  http://www.marketwatch.com/story/hillary-clinton-as-a-person-im-ok-as-an-american-im-pretty-worried-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New
+
+
+sending press data to database.
+Title:  To improve your productivity, paint your office this color (it’s scientifically proven)
+URL:  http://www.marketwatch.com/story/scientists-developed-these-colors-for-offices-to-make-employees-more-productive-2017-03-31
+Ticker:  UN,FB
+Date:  Apr-6-2017
+Keyword matchs:  New-Receives-New-New
+
+
+Title:  America’s best and worst airline? Depends on what you’re looking for
+URL:  http://www.marketwatch.com/story/americas-best-and-worst-airline-depends-on-what-youre-looking-for-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-New-Receives-New-New
+
+
+Title:  The American Dream appears to be more attainable in Mexico and China
+URL:  http://www.marketwatch.com/story/nearly-half-of-all-millennials-living-in-this-state-own-a-home-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-Primary-Receives-New-New
+
+
+Title:  This is how many people smoking still kills every year
+URL:  http://www.marketwatch.com/story/this-is-how-many-people-smoking-still-kills-every-year-2017-04-06
+Ticker:  RAI,PM,BTI,IMB
+Date:  Apr-6-2017
+Keyword matchs:  New-FDA-Receives
+
+
+Title:  Amazon will create 30,000 part-time jobs, but millions of Americans are desperate to work full-time
+URL:  http://www.marketwatch.com/story/amazon-will-create-30000-part-time-jobs-but-american-workers-are-desperate-to-work-full-time-2017-04-06
+Ticker:  AMZN
+Date:  Apr-6-2017
+Keyword matchs:  Increase-Increase-Increase-Increase-Receives
+
+
+Title:  The Wall Street Journal: Azul IPO suspended by Brazil’s market regulators
+URL:  http://www.marketwatch.com/story/azul-ipo-suspended-by-brazils-market-regulators-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  The Wall Street Journal: Lehman floats RMBS settlement worth at least $1 billion
+URL:  http://www.marketwatch.com/story/lehman-floats-rmbs-settlement-worth-at-least-1-billion-2017-04-06-18103526
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  4 things to know about the Okta IPO
+URL:  http://www.marketwatch.com/story/4-things-to-know-about-okta-before-it-goes-public-2017-03-20
+Ticker:  OKTA,GS,JPM,IBM,MSFT,SYMC,FOX,ADBE,MGM,TWLO,AMZN,GOOG,GOOGL,WDAY,MULE
+Date:  Apr-6-2017
+Keyword matchs:  Investors-New-New
+
+
+Title:  Key Words: Hillary Clinton: ‘As a person, I’m OK. As an American, I’m pretty worried’
+URL:  http://www.marketwatch.com/story/hillary-clinton-as-a-person-im-ok-as-an-american-im-pretty-worried-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New
+
+
+sending press data to database.
+Title:  To improve your productivity, paint your office this color (it’s scientifically proven)
+URL:  http://www.marketwatch.com/story/scientists-developed-these-colors-for-offices-to-make-employees-more-productive-2017-03-31
+Ticker:  UN,FB
+Date:  Apr-6-2017
+Keyword matchs:  New-Receives-New-New
+
+
+Title:  America’s best and worst airline? Depends on what you’re looking for
+URL:  http://www.marketwatch.com/story/americas-best-and-worst-airline-depends-on-what-youre-looking-for-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-New-Receives-New-New
+
+
+Title:  The American Dream appears to be more attainable in Mexico and China
+URL:  http://www.marketwatch.com/story/nearly-half-of-all-millennials-living-in-this-state-own-a-home-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-Primary-Receives-New-New
+
+
+Title:  This is how many people smoking still kills every year
+URL:  http://www.marketwatch.com/story/this-is-how-many-people-smoking-still-kills-every-year-2017-04-06
+Ticker:  RAI,PM,BTI,IMB
+Date:  Apr-6-2017
+Keyword matchs:  New-FDA-Receives
+
+
+Title:  Amazon will create 30,000 part-time jobs, but millions of Americans are desperate to work full-time
+URL:  http://www.marketwatch.com/story/amazon-will-create-30000-part-time-jobs-but-american-workers-are-desperate-to-work-full-time-2017-04-06
+Ticker:  AMZN
+Date:  Apr-6-2017
+Keyword matchs:  Increase-Increase-Increase-Increase-Receives
+
+
+Title:  The Wall Street Journal: Azul IPO suspended by Brazil’s market regulators
+URL:  http://www.marketwatch.com/story/azul-ipo-suspended-by-brazils-market-regulators-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  The Wall Street Journal: Lehman floats RMBS settlement worth at least $1 billion
+URL:  http://www.marketwatch.com/story/lehman-floats-rmbs-settlement-worth-at-least-1-billion-2017-04-06-18103526
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  4 things to know about the Okta IPO
+URL:  http://www.marketwatch.com/story/4-things-to-know-about-okta-before-it-goes-public-2017-03-20
+Ticker:  OKTA,GS,JPM,IBM,MSFT,SYMC,FOX,ADBE,MGM,TWLO,AMZN,GOOG,GOOGL,WDAY,MULE
+Date:  Apr-6-2017
+Keyword matchs:  Investors-New-New
+
+
+Title:  Key Words: Hillary Clinton: ‘As a person, I’m OK. As an American, I’m pretty worried’
+URL:  http://www.marketwatch.com/story/hillary-clinton-as-a-person-im-ok-as-an-american-im-pretty-worried-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New
+
+
+sending press data to database.
+Title:  To improve your productivity, paint your office this color (it’s scientifically proven)
+URL:  http://www.marketwatch.com/story/scientists-developed-these-colors-for-offices-to-make-employees-more-productive-2017-03-31
+Ticker:  UN,FB
+Date:  Apr-6-2017
+Keyword matchs:  New-Receives-New-New
+
+
+Title:  America’s best and worst airline? Depends on what you’re looking for
+URL:  http://www.marketwatch.com/story/americas-best-and-worst-airline-depends-on-what-youre-looking-for-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-New-Receives-New-New
+
+
+Title:  The American Dream appears to be more attainable in Mexico and China
+URL:  http://www.marketwatch.com/story/nearly-half-of-all-millennials-living-in-this-state-own-a-home-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-Primary-Receives-New-New
+
+
+Title:  This is how many people smoking still kills every year
+URL:  http://www.marketwatch.com/story/this-is-how-many-people-smoking-still-kills-every-year-2017-04-06
+Ticker:  RAI,PM,BTI,IMB
+Date:  Apr-6-2017
+Keyword matchs:  New-FDA-Receives
+
+
+Title:  Amazon will create 30,000 part-time jobs, but millions of Americans are desperate to work full-time
+URL:  http://www.marketwatch.com/story/amazon-will-create-30000-part-time-jobs-but-american-workers-are-desperate-to-work-full-time-2017-04-06
+Ticker:  AMZN
+Date:  Apr-6-2017
+Keyword matchs:  Increase-Increase-Increase-Increase-Receives
+
+
+Title:  The Wall Street Journal: Azul IPO suspended by Brazil’s market regulators
+URL:  http://www.marketwatch.com/story/azul-ipo-suspended-by-brazils-market-regulators-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  The Wall Street Journal: Lehman floats RMBS settlement worth at least $1 billion
+URL:  http://www.marketwatch.com/story/lehman-floats-rmbs-settlement-worth-at-least-1-billion-2017-04-06-18103526
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  4 things to know about the Okta IPO
+URL:  http://www.marketwatch.com/story/4-things-to-know-about-okta-before-it-goes-public-2017-03-20
+Ticker:  OKTA,GS,JPM,IBM,MSFT,SYMC,FOX,ADBE,MGM,TWLO,AMZN,GOOG,GOOGL,WDAY,MULE
+Date:  Apr-6-2017
+Keyword matchs:  Investors-New-New
+
+
+Title:  Key Words: Hillary Clinton: ‘As a person, I’m OK. As an American, I’m pretty worried’
+URL:  http://www.marketwatch.com/story/hillary-clinton-as-a-person-im-ok-as-an-american-im-pretty-worried-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New
+
+
+sending press data to database.
+Title:  To improve your productivity, paint your office this color (it’s scientifically proven)
+URL:  http://www.marketwatch.com/story/scientists-developed-these-colors-for-offices-to-make-employees-more-productive-2017-03-31
+Ticker:  UN,FB
+Date:  Apr-6-2017
+Keyword matchs:  New-Receives-New-New
+
+
+Title:  America’s best and worst airline? Depends on what you’re looking for
+URL:  http://www.marketwatch.com/story/americas-best-and-worst-airline-depends-on-what-youre-looking-for-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-New-Receives-New-New
+
+
+Title:  The American Dream appears to be more attainable in Mexico and China
+URL:  http://www.marketwatch.com/story/nearly-half-of-all-millennials-living-in-this-state-own-a-home-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-Primary-Receives-New-New
+
+
+Title:  This is how many people smoking still kills every year
+URL:  http://www.marketwatch.com/story/this-is-how-many-people-smoking-still-kills-every-year-2017-04-06
+Ticker:  RAI,PM,BTI,IMB
+Date:  Apr-6-2017
+Keyword matchs:  New-FDA-Receives
+
+
+Title:  Amazon will create 30,000 part-time jobs, but millions of Americans are desperate to work full-time
+URL:  http://www.marketwatch.com/story/amazon-will-create-30000-part-time-jobs-but-american-workers-are-desperate-to-work-full-time-2017-04-06
+Ticker:  AMZN
+Date:  Apr-6-2017
+Keyword matchs:  Increase-Increase-Increase-Increase-Receives
+
+
+Title:  The Wall Street Journal: Azul IPO suspended by Brazil’s market regulators
+URL:  http://www.marketwatch.com/story/azul-ipo-suspended-by-brazils-market-regulators-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  The Wall Street Journal: Lehman floats RMBS settlement worth at least $1 billion
+URL:  http://www.marketwatch.com/story/lehman-floats-rmbs-settlement-worth-at-least-1-billion-2017-04-06-18103526
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  4 things to know about the Okta IPO
+URL:  http://www.marketwatch.com/story/4-things-to-know-about-okta-before-it-goes-public-2017-03-20
+Ticker:  OKTA,GS,JPM,IBM,MSFT,SYMC,FOX,ADBE,MGM,TWLO,AMZN,GOOG,GOOGL,WDAY,MULE
+Date:  Apr-6-2017
+Keyword matchs:  Investors-New-New
+
+
+Title:  Key Words: Hillary Clinton: ‘As a person, I’m OK. As an American, I’m pretty worried’
+URL:  http://www.marketwatch.com/story/hillary-clinton-as-a-person-im-ok-as-an-american-im-pretty-worried-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New
+
+
+sending press data to database.
+Title:  To improve your productivity, paint your office this color (it’s scientifically proven)
+URL:  http://www.marketwatch.com/story/scientists-developed-these-colors-for-offices-to-make-employees-more-productive-2017-03-31
+Ticker:  UN,FB
+Date:  Apr-6-2017
+Keyword matchs:  New-Receives-New-New
+
+
+Title:  America’s best and worst airline? Depends on what you’re looking for
+URL:  http://www.marketwatch.com/story/americas-best-and-worst-airline-depends-on-what-youre-looking-for-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-New-Receives-New-New
+
+
+Title:  The American Dream appears to be more attainable in Mexico and China
+URL:  http://www.marketwatch.com/story/nearly-half-of-all-millennials-living-in-this-state-own-a-home-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-Primary-Receives-New-New
+
+
+Title:  This is how many people smoking still kills every year
+URL:  http://www.marketwatch.com/story/this-is-how-many-people-smoking-still-kills-every-year-2017-04-06
+Ticker:  RAI,PM,BTI,IMB
+Date:  Apr-6-2017
+Keyword matchs:  New-FDA-Receives
+
+
+Title:  Amazon will create 30,000 part-time jobs, but millions of Americans are desperate to work full-time
+URL:  http://www.marketwatch.com/story/amazon-will-create-30000-part-time-jobs-but-american-workers-are-desperate-to-work-full-time-2017-04-06
+Ticker:  AMZN
+Date:  Apr-6-2017
+Keyword matchs:  Increase-Increase-Increase-Increase-Receives
+
+
+Title:  The Wall Street Journal: Azul IPO suspended by Brazil’s market regulators
+URL:  http://www.marketwatch.com/story/azul-ipo-suspended-by-brazils-market-regulators-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  The Wall Street Journal: Lehman floats RMBS settlement worth at least $1 billion
+URL:  http://www.marketwatch.com/story/lehman-floats-rmbs-settlement-worth-at-least-1-billion-2017-04-06-18103526
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  4 things to know about the Okta IPO
+URL:  http://www.marketwatch.com/story/4-things-to-know-about-okta-before-it-goes-public-2017-03-20
+Ticker:  OKTA,GS,JPM,IBM,MSFT,SYMC,FOX,ADBE,MGM,TWLO,AMZN,GOOG,GOOGL,WDAY,MULE
+Date:  Apr-6-2017
+Keyword matchs:  Investors-New-New
+
+
+Title:  Key Words: Hillary Clinton: ‘As a person, I’m OK. As an American, I’m pretty worried’
+URL:  http://www.marketwatch.com/story/hillary-clinton-as-a-person-im-ok-as-an-american-im-pretty-worried-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New
+
+
+sending press data to database.
+Title:  To improve your productivity, paint your office this color (it’s scientifically proven)
+URL:  http://www.marketwatch.com/story/scientists-developed-these-colors-for-offices-to-make-employees-more-productive-2017-03-31
+Ticker:  UN,FB
+Date:  Apr-6-2017
+Keyword matchs:  New-Receives-New-New
+
+
+Title:  America’s best and worst airline? Depends on what you’re looking for
+URL:  http://www.marketwatch.com/story/americas-best-and-worst-airline-depends-on-what-youre-looking-for-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-Increase-New-Receives-New-New
+
+
+Title:  The American Dream appears to be more attainable in Mexico and China
+URL:  http://www.marketwatch.com/story/nearly-half-of-all-millennials-living-in-this-state-own-a-home-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-Primary-Receives-New-New
+
+
+Title:  This is how many people smoking still kills every year
+URL:  http://www.marketwatch.com/story/this-is-how-many-people-smoking-still-kills-every-year-2017-04-06
+Ticker:  RAI,PM,BTI,IMB
+Date:  Apr-6-2017
+Keyword matchs:  New-FDA-Receives
+
+
+Title:  Amazon will create 30,000 part-time jobs, but millions of Americans are desperate to work full-time
+URL:  http://www.marketwatch.com/story/amazon-will-create-30000-part-time-jobs-but-american-workers-are-desperate-to-work-full-time-2017-04-06
+Ticker:  AMZN
+Date:  Apr-6-2017
+Keyword matchs:  Increase-Increase-Increase-Increase-Receives
+
+
+Title:  The Wall Street Journal: Azul IPO suspended by Brazil’s market regulators
+URL:  http://www.marketwatch.com/story/azul-ipo-suspended-by-brazils-market-regulators-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  The Wall Street Journal: Lehman floats RMBS settlement worth at least $1 billion
+URL:  http://www.marketwatch.com/story/lehman-floats-rmbs-settlement-worth-at-least-1-billion-2017-04-06-18103526
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  Investors
+
+
+Title:  4 things to know about the Okta IPO
+URL:  http://www.marketwatch.com/story/4-things-to-know-about-okta-before-it-goes-public-2017-03-20
+Ticker:  OKTA,GS,JPM,IBM,MSFT,SYMC,FOX,ADBE,MGM,TWLO,AMZN,GOOG,GOOGL,WDAY,MULE
+Date:  Apr-6-2017
+Keyword matchs:  Investors-New-New
+
+
+Title:  Key Words: Hillary Clinton: ‘As a person, I’m OK. As an American, I’m pretty worried’
+URL:  http://www.marketwatch.com/story/hillary-clinton-as-a-person-im-ok-as-an-american-im-pretty-worried-2017-04-06
+Ticker:  not found
+Date:  Apr-6-2017
+Keyword matchs:  New-New
+
+
