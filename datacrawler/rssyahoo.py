@@ -21,7 +21,8 @@ class RSSYahoo(RSSCrawler):
 
         RSSCrawler.__init__(self,self.yahoo_rss_address,crawl_speed)
 
-        self.ticker_index = 900 
+        # Tickers ordered alphabetically from 1 -> ~3000
+        self.ticker_index = 1
 
     def makeRequest(self):
         # Retrieve the next feed for the next ticker symbol
@@ -53,7 +54,7 @@ class RSSYahoo(RSSCrawler):
                     print("URL:",url)
 
                 if(parser.time == None):
-                    print("Time not found!")
+                    print("Publish Date(time) not found")
                     print("Article URL:",url)
 
                 story_data = {"ticker":tic,"title":story.title,

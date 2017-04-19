@@ -6,11 +6,8 @@ from keywordparser import KeywordParser
 
 
 class MarketWatchParser(KeywordParser):
-    # TODO Maintain this list of abgreviations
-    months = {"Apr":4,"June":6}
-
-    def __init__(self,keywords):
-        KeywordParser.__init__(self,keywords)
+    def __init__(self):
+        KeywordParser.__init__(self)
 
         self.hits = []
         self.time = ""
@@ -83,12 +80,16 @@ class MarketWatchParser(KeywordParser):
     def getDatum(self):
         datum = {}
 
-        # TODO find a better way of selecting the ticker
-        datum["ticker"] = self.tickers[0]
+        datum["tickers"] = self.tickers
 
         # Filter date
+        time = ""
         if(self.time != ""):
             words = self.time.split()
             month = words[0]
             day = words[1][0:len(words[1])]            
             year = words[2]
+            time = month + "-" + day + "-" + year
+        datum["time"] = time
+
+        return datum

@@ -8,7 +8,7 @@ from tickerlist import TickerList
 # Parsing Tools:
 from dbInterface import dbInterface
 import feedparser
-from yahfinparser import YahFinParser 
+from marketwatchparser import MarketWatchParser
 from keywordlist import KeywordList
 
 # Standard Library
@@ -22,16 +22,26 @@ class RSSMarketWatch(RSSCrawler):
         RSSCrawler.makeRequest(self)
 
         data = []
-        for story in self.article_list:
+        for article in self.article_list:
             time.sleep(self.crawl_speed)
             self.last_request_time = time.time()
             self.getCount = self.getCount + 1
-            url = story.link.split("?")[0]
-            story_html = requests.get(story.link)
+            url = article.link # TODO Filter this
+            article_http = requests.get(url)
 
             parser = MarketWatchParser()
-            parser.feed(story_text.text)            
+            parser.feed(article_http.text)            
             if(len(parser.hits) > 0):
-                datum = parser.getDatum()         
-   
-         
+                datum = parser.getDatum() # Gets tickers/time
+                datum["url"] = url
+                datum["title"] = article.title
+                datum["open_price"] = 0
+                # The descriptions in the rss feed suck. use first paragraph of story ideally. TODO
+#                datum["description"] = article.description
+                data.append(datum)
+  
+        # Still Experimental. 
+#        dbInterface.sendPressData(data)         
+
+        # Currently for debugging.
+        dbInterface.printPressData(data)
