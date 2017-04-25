@@ -12,9 +12,10 @@ class LeaderboardViewController: UIViewController, UICollectionViewDelegate, UIC
 
     @IBOutlet weak var myCollectionView: UICollectionView!
     
+    let themeColor = UIColor(red: 95/255, green: 207/255, blue: 153/255, alpha: 0.5)
     let menuManager = MenuManager()
     
-    var financeData: [LeaderboardData] = []
+    var financeData: [LeaderboardData?] = []
     
     /*
         This function will be used to fetch our data from the json
@@ -24,17 +25,13 @@ class LeaderboardViewController: UIViewController, UICollectionViewDelegate, UIC
         let task = URLSession.shared.dataTask(with: url!) {(data: Data?, response: URLResponse?, error: Error?) in
             if error != nil {
                 print("Error")
+                return
             } else {
                 self.financeData = [LeaderboardData]()
                 if let content = data {
                     do {
                         //Array
                         let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as? [[String: String]]
-                        /*
-                        //debugging information
-                        print(myJson!)
-                        print(myJson!.count)
-                        */
                         
                         //place section titles
                         let titleData = LeaderboardData()
@@ -54,15 +51,6 @@ class LeaderboardViewController: UIViewController, UICollectionViewDelegate, UIC
                                 finance.price = price
                                 finance.weightedavebasicsharesos = osShares
                                 finance.volume = volumes
-                                
-                                /*
-                                //debugging information
-                                print("ticker: \(finance.ticker)")
-                                print("os_shares: \(finance.weightedavebasicsharesos)")
-                                print("volume: \(finance.volume)")
-                                print("price: \(finance.price)")
-                                print("pct_change: \(finance.percentChange)")
-                                */
                             }
                             self.financeData.append(finance)
                         }
@@ -79,49 +67,44 @@ class LeaderboardViewController: UIViewController, UICollectionViewDelegate, UIC
     }
     
     /*
-     This function determines the amount of columns.
-     */
+        This function determines the amount of rows.
+    */
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return self.financeData.count
-        //return 5
     }
     
     /*
-     This function determines the amount of rows.
-     */
+        This function determines the amount of columns.
+    */
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
-        //return self.financeData.count
         return 5
     }
     
     /*
-     This function determines the objects in the cell
-     */
+        This function determines the objects in the cell
+    */
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MyCollectionViewCell
         
         cell.myLabel?.text = nil
-        
+        cell.myLabel.textColor = UIColor.white
         cell.myLabel?.textAlignment = NSTextAlignment.left
         
         //set the border for each cell
         cell.layer.borderWidth = 1
-        cell.layer.borderColor = UIColor.black.cgColor
         
         if indexPath.row == 0 {
             //set the background and text color for the labels
             cell.backgroundColor = UIColor.darkGray
-            cell.myLabel?.textColor = UIColor.white
+            cell.layer.borderColor = UIColor.black.cgColor
         } else {
             //set the background and text color for the other cells
-            cell.backgroundColor = UIColor.white
-            cell.myLabel?.textColor = UIColor.black
+            cell.backgroundColor = UIColor.black
+            cell.layer.borderColor = themeColor.cgColor
         }
         
-        //set the label for each cell
+        //set the label for each cell straight from json
         if indexPath.section == 0 {
             cell.myLabel.text = financeData[indexPath.row]?.ticker
         } else if indexPath.section == 1 {
@@ -137,6 +120,9 @@ class LeaderboardViewController: UIViewController, UICollectionViewDelegate, UIC
         return cell
     }
     
+    /*
+        This function allows the user to use the Menu
+    */
     @IBAction func MenuPressed(_ sender: Any) {
         menuManager.openMenu()
     }
@@ -145,7 +131,10 @@ class LeaderboardViewController: UIViewController, UICollectionViewDelegate, UIC
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        fetchData() //load the JSON data into the collection view
+        navigationController?.navigationBar.barTintColor = themeColor
+        
+        //preload the Leaderboard data into the collection view
+        fetchData()
         
         self.automaticallyAdjustsScrollViewInsets = false
     }
