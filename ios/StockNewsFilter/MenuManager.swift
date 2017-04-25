@@ -10,7 +10,11 @@ import UIKit
 
 class MenuManager: NSObject, UITableViewDelegate, UITableViewDataSource {
 
-    let tableItems = ["Account", "Watchlist", "Logout"]
+    let tableItems = ["Press Releases",
+                      "Leaderboard",
+                      "Watch List",
+                      "How To Use FLTR",
+                      "Logout"]
     
     let blackView = UIView()
     
@@ -39,6 +43,11 @@ class MenuManager: NSObject, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath)
         cell.textLabel?.text = tableItems[indexPath.item]
+        
+        cell.textLabel?.textColor = UIColor(red: 95/255, green: 207/255, blue: 153/255, alpha: 1)
+        cell.backgroundColor = UIColor.black
+        tableView.backgroundColor = UIColor.black
+        
         return cell
     }
 
@@ -61,23 +70,25 @@ class MenuManager: NSObject, UITableViewDelegate, UITableViewDataSource {
     */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         var newView: UIViewController
         
         //if last item is selected, then logout; else go to a new view
         if indexPath.row == tableItems.count - 1 {
-            newView = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
-            
-            /* This code to create an alert */
-            //let alert = UIAlertController(title: "Logout", message: "Are you sure you want to log out", preferredStyle: UIAlertControllerStyle.alert)
-            //alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-            //alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
-            //UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-        
+            UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
+            UserDefaults.standard.synchronize()
+            newView = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        } else if indexPath.row == 0 {
+            newView = storyboard.instantiateViewController(withIdentifier: "NewsNavigationController") as! UINavigationController
+        } else if indexPath.row == 1 {
+            newView = storyboard.instantiateViewController(withIdentifier: "LeaderboardNavigationController") as! UINavigationController
+        } else if indexPath.row == 2{
+            newView = storyboard.instantiateViewController(withIdentifier: "WatchlistNavigationController") as! UINavigationController
         } else {
-            newView = storyboard.instantiateViewController(withIdentifier: "ResultController") as! MenuItemViewController
+            newView = storyboard.instantiateViewController(withIdentifier: "HelpNavigationController") as! UINavigationController
         }
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = newView
     }
     
@@ -112,7 +123,6 @@ class MenuManager: NSObject, UITableViewDelegate, UITableViewDataSource {
         This function "restores" the view when the user taps outside of menu table
     */
     func dismissMenu() {
-        
         //Animate to allow menu to "slide out"
         UIView.animate(withDuration: 0.5, animations: {
             self.blackView.alpha = 0
@@ -128,8 +138,6 @@ class MenuManager: NSObject, UITableViewDelegate, UITableViewDataSource {
         
         menuTableView.delegate = self
         menuTableView.dataSource = self
-        
-        //menuTableView.isScrollEnabled = false
         menuTableView.bounces = false
         
         menuTableView.register(BaseTableViewCell.classForCoder(), forCellReuseIdentifier: "cellid")
