@@ -11,8 +11,10 @@ import UIKit
 class CustomCollectionViewLayout: UICollectionViewLayout {
     
     //define the width and height for each cell
-    let cellHeight: CGFloat = 50
-    let cellWidth: CGFloat = 160
+    let cellWidth: CGFloat = 50
+    let cellHeight: CGFloat = 160
+    
+    var dataSourceDidUpdate = true
     
     //create a dictionary to hold UICollectionViewLayoutAttributes for each cell (like a Hash Table)
     //the layout attributes will define the cell's size and position (x,y, and z index)
@@ -48,8 +50,9 @@ class CustomCollectionViewLayout: UICollectionViewLayout {
                 
                 //CGRect will define the origin and size of the cell frame
                 let cellAttributes = UICollectionViewLayoutAttributes(forCellWith: cellIndex)
-                cellAttributes.frame = CGRect(x: xPos, y: yPos, width: cellWidth, height: cellHeight)
-                cellAttributes.zIndex = 1
+                
+                //Inverse the cell direction
+                cellAttributes.frame = CGRect(x: yPos, y: xPos, width: cellHeight, height: cellWidth)
                 
                 //save the attributes
                 cellAttributesDictionary[cellIndex] = cellAttributes
@@ -59,7 +62,7 @@ class CustomCollectionViewLayout: UICollectionViewLayout {
         //Set the contentSize of the collection view
         let contentWidth = CGFloat(collectionView!.numberOfItems(inSection: 0)) * cellWidth
         let contentHeight = CGFloat(collectionView!.numberOfSections) * cellHeight
-        contentSize = CGSize(width: contentWidth, height: contentHeight)
+        contentSize = CGSize(width: contentHeight, height: contentWidth)
     }
     
     /*
