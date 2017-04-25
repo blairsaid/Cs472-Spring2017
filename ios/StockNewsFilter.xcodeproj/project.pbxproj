@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB1B542B1EAFC687008CF7B0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1B54291EAFC687008CF7B0 /* FBSDKCoreKit.framework */; };
+		BB1B542C1EAFC687008CF7B0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1B542A1EAFC687008CF7B0 /* FBSDKLoginKit.framework */; };
+		BB1B54301EAFC6E9008CF7B0 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1B542F1EAFC6E9008CF7B0 /* FBSDKShareKit.framework */; };
+		BB1B54321EAFDEB5008CF7B0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1B54311EAFDEB5008CF7B0 /* Bolts.framework */; };
 		BB3C077C1E4D496C004FEDE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3C077B1E4D496C004FEDE5 /* AppDelegate.swift */; };
 		BB3C077E1E4D496C004FEDE5 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3C077D1E4D496C004FEDE5 /* NewsViewController.swift */; };
 		BB3C07811E4D496C004FEDE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB3C077F1E4D496C004FEDE5 /* Main.storyboard */; };
@@ -15,15 +19,17 @@
 		BB3C07911E4D496C004FEDE5 /* StockNewsFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3C07901E4D496C004FEDE5 /* StockNewsFilterTests.swift */; };
 		BB3C079C1E4D496C004FEDE5 /* StockNewsFilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3C079B1E4D496C004FEDE5 /* StockNewsFilterUITests.swift */; };
 		BB3C07AA1E4D58E7004FEDE5 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3C07A91E4D58E7004FEDE5 /* MyCollectionViewCell.swift */; };
+		BB452F151E8B5EAE009CF398 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB452F141E8B5EAE009CF398 /* SignupViewController.swift */; };
 		BB4938F81E4E729500949D87 /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4938F71E4E729500949D87 /* CustomCollectionViewLayout.swift */; };
 		BB4938FA1E4EB36D00949D87 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4938F91E4EB36D00949D87 /* LeaderboardViewController.swift */; };
 		BB4DAC621E8438E8008DF2E5 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4DAC611E8438E8008DF2E5 /* MenuManager.swift */; };
 		BB4DAC641E843F76008DF2E5 /* baseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB4DAC631E843F76008DF2E5 /* baseCell.xib */; };
 		BB4DAC661E84402E008DF2E5 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4DAC651E84402E008DF2E5 /* BaseTableViewCell.swift */; };
-		BB4DAC681E845CB9008DF2E5 /* MenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4DAC671E845CB9008DF2E5 /* MenuItemViewController.swift */; };
+		BB4DAC681E845CB9008DF2E5 /* WatchlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4DAC671E845CB9008DF2E5 /* WatchlistViewController.swift */; };
+		BB7082041EA67FBF0076FFA9 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7082031EA67FBF0076FFA9 /* HelpViewController.swift */; };
 		BB7ED4BF1E6E55F8000F1C32 /* LeaderboardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7ED4BE1E6E55F8000F1C32 /* LeaderboardData.swift */; };
 		BBC07A5E1E73C162009F7864 /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC07A5D1E73C162009F7864 /* NewsData.swift */; };
-		BBC07A601E73D1AB009F7864 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC07A5F1E73D1AB009F7864 /* ProfileViewController.swift */; };
+		BBC07A601E73D1AB009F7864 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC07A5F1E73D1AB009F7864 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB1B54291EAFC687008CF7B0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		BB1B542A1EAFC687008CF7B0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		BB1B542F1EAFC6E9008CF7B0 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		BB1B54311EAFDEB5008CF7B0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		BB3C07781E4D496C004FEDE5 /* StockNewsFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockNewsFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3C077B1E4D496C004FEDE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB3C077D1E4D496C004FEDE5 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -58,15 +68,17 @@
 		BB3C079B1E4D496C004FEDE5 /* StockNewsFilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockNewsFilterUITests.swift; sourceTree = "<group>"; };
 		BB3C079D1E4D496C004FEDE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB3C07A91E4D58E7004FEDE5 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB452F141E8B5EAE009CF398 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		BB4938F71E4E729500949D87 /* CustomCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayout.swift; sourceTree = "<group>"; };
 		BB4938F91E4EB36D00949D87 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		BB4DAC611E8438E8008DF2E5 /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
 		BB4DAC631E843F76008DF2E5 /* baseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = baseCell.xib; sourceTree = "<group>"; };
 		BB4DAC651E84402E008DF2E5 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
-		BB4DAC671E845CB9008DF2E5 /* MenuItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemViewController.swift; sourceTree = "<group>"; };
+		BB4DAC671E845CB9008DF2E5 /* WatchlistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchlistViewController.swift; sourceTree = "<group>"; };
+		BB7082031EA67FBF0076FFA9 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		BB7ED4BE1E6E55F8000F1C32 /* LeaderboardData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardData.swift; sourceTree = "<group>"; };
 		BBC07A5D1E73C162009F7864 /* NewsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
-		BBC07A5F1E73D1AB009F7864 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BBC07A5F1E73D1AB009F7864 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +86,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB1B54301EAFC6E9008CF7B0 /* FBSDKShareKit.framework in Frameworks */,
+				BB1B542C1EAFC687008CF7B0 /* FBSDKLoginKit.framework in Frameworks */,
+				BB1B542B1EAFC687008CF7B0 /* FBSDKCoreKit.framework in Frameworks */,
+				BB1B54321EAFDEB5008CF7B0 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,16 +139,22 @@
 				BB4938F71E4E729500949D87 /* CustomCollectionViewLayout.swift */,
 				BB3C07A91E4D58E7004FEDE5 /* MyCollectionViewCell.swift */,
 				BB3C077F1E4D496C004FEDE5 /* Main.storyboard */,
+				BB7082031EA67FBF0076FFA9 /* HelpViewController.swift */,
 				BB4DAC611E8438E8008DF2E5 /* MenuManager.swift */,
-				BB4DAC671E845CB9008DF2E5 /* MenuItemViewController.swift */,
+				BB452F141E8B5EAE009CF398 /* SignupViewController.swift */,
+				BB4DAC671E845CB9008DF2E5 /* WatchlistViewController.swift */,
 				BB4DAC651E84402E008DF2E5 /* BaseTableViewCell.swift */,
 				BB4DAC631E843F76008DF2E5 /* baseCell.xib */,
-				BBC07A5F1E73D1AB009F7864 /* ProfileViewController.swift */,
+				BBC07A5F1E73D1AB009F7864 /* LoginViewController.swift */,
 				BB7ED4BE1E6E55F8000F1C32 /* LeaderboardData.swift */,
 				BBC07A5D1E73C162009F7864 /* NewsData.swift */,
 				BB3C07821E4D496C004FEDE5 /* Assets.xcassets */,
 				BB3C07841E4D496C004FEDE5 /* LaunchScreen.storyboard */,
 				BB3C07871E4D496C004FEDE5 /* Info.plist */,
+				BB1B54311EAFDEB5008CF7B0 /* Bolts.framework */,
+				BB1B542F1EAFC6E9008CF7B0 /* FBSDKShareKit.framework */,
+				BB1B54291EAFC687008CF7B0 /* FBSDKCoreKit.framework */,
+				BB1B542A1EAFC687008CF7B0 /* FBSDKLoginKit.framework */,
 			);
 			path = StockNewsFilter;
 			sourceTree = "<group>";
@@ -293,12 +315,14 @@
 				BB4938FA1E4EB36D00949D87 /* LeaderboardViewController.swift in Sources */,
 				BB7ED4BF1E6E55F8000F1C32 /* LeaderboardData.swift in Sources */,
 				BB3C077E1E4D496C004FEDE5 /* NewsViewController.swift in Sources */,
-				BB4DAC681E845CB9008DF2E5 /* MenuItemViewController.swift in Sources */,
+				BB7082041EA67FBF0076FFA9 /* HelpViewController.swift in Sources */,
+				BB4DAC681E845CB9008DF2E5 /* WatchlistViewController.swift in Sources */,
 				BB4DAC621E8438E8008DF2E5 /* MenuManager.swift in Sources */,
 				BB3C077C1E4D496C004FEDE5 /* AppDelegate.swift in Sources */,
+				BB452F151E8B5EAE009CF398 /* SignupViewController.swift in Sources */,
 				BB4938F81E4E729500949D87 /* CustomCollectionViewLayout.swift in Sources */,
 				BB3C07AA1E4D58E7004FEDE5 /* MyCollectionViewCell.swift in Sources */,
-				BBC07A601E73D1AB009F7864 /* ProfileViewController.swift in Sources */,
+				BBC07A601E73D1AB009F7864 /* LoginViewController.swift in Sources */,
 				BB4DAC661E84402E008DF2E5 /* BaseTableViewCell.swift in Sources */,
 				BBC07A5E1E73C162009F7864 /* NewsData.swift in Sources */,
 			);
@@ -452,6 +476,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StockNewsFilter",
+				);
 				INFOPLIST_FILE = StockNewsFilter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CS472-Spring2017.StockNewsFilter";
@@ -464,6 +492,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StockNewsFilter",
+				);
 				INFOPLIST_FILE = StockNewsFilter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CS472-Spring2017.StockNewsFilter";
