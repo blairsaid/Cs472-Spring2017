@@ -7,125 +7,83 @@
 //
 
 import UIKit
+import UserNotifications
 
 class NewsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var MyCollectionView: UICollectionView!
     
+    let themeColor = UIColor(red: 95/255, green: 207/255, blue: 153/255, alpha: 0.5)
     let menuManager = MenuManager()
     
+    var newsData: [NewsData?] = []
     
-    var newsData = [NewsData]()
-    
-    var time = ["Time",
-                "17:06:49",
-                "17:05:34",
-                "17:05:03",
-                "17:04:59",
-                "17:03:17",
-                "17:02:11",
-                "17:01:10",
-                "16:47:29",
-                "16:46:13",
-                "16:43:20",
-                "16:43:02",
-                "16:43:01",
-                "16:42:51",
-                "16:30:15",
-                "16:30:15"]
-    var articleURL = ["",
-                      "http://www.investopedia.com/news/ubs-ceo-gets-bonus-reduced-bac-ms/?partner=YahooSA",
-                      "https://www.forbes.com/sites/bryanrich/2017/03/10/what-bernanke-thinks-about-the-outlook/?utm_source=yahoo&utm_medium=partner&utm_campaign=yahootix&partner=yahootix#529a3c163dae",
-                      "https://www.thestreet.com/story/14036171/1/ciena-when-will-investors-see-the-light.html?puc=yahoo&cm_ven=YAHOO",
-                      "http://www.investopedia.com/news/nvidia-ups-its-cloud-artifical-intelligence-game/?partner=YahooSA",
-                      "http://www.insidermonkey.com/blog/is-advanced-micro-devices-amd-a-good-investment-565350/",
-                      "http://finance.yahoo.com/news/strike-hits-output-top-peru-222105450.html",
-                      "http://www.barrons.com/articles/arista-up-83-is-still-a-good-bet-1489210619?mod=yahoobarrons&ru=yahoo",
-                      "http://alphatrends.tumblr.com/post/158243565270/stock-market-video-analysis",
-                      "http://realmoney.thestreet.com/articles/03/10/2017/its-called-watch-list-reason?puc=yahoo&cm_ven=YAHOO",
-                      "https://www.bloomberg.com/news/articles/2017-03-10/nissan-ford-bmw-sue-takata-over-faulty-airbag-losses?cmpid=yhoo.headline",
-                      "http://finance.yahoo.com/news/goodyear-shares-concepts-technology-urban-143900489.html",
-                      "http://finance.yahoo.com/news/vetr-downgrades-regeneron-off-share-173534525.html",
-                      "http://www.capitalcube.com/blog/index.php/nucor-corp-breached-its-50-day-moving-average-in-a-bullish-manner-nue-us-march-9-2017/",
-                      "http://finance.yahoo.com/news/top-5-themes-deutsche-banks-182247677.html",
-                      "http://blogs.barrons.com/techtraderdaily/2017/03/10/recent-western-digital-weakness-a-buying-opportunity-benchmark/?mod=yahoobarrons&ru=yahoo"]
-    var headlines = ["Headlines",
-                     "UBS CEO Sergio ermotti's Bonus Gets Reduced",
-                     "What Bernanke Thinks About The Outlook",
-                     "Ciene: When Will Investors See the Light?",
-                     "NVDIA Ups Its Cloud Artificial Intelligence Game",
-                     "Is Advanced Micro Devices (AMD) a Good Investment?",
-                     "Strike hits output at top Peru copper min Cerro Verde -union",
-                     "[$$] Arista, Up 83%, Is Still a Good Bet",
-                     "Stock Market Video Analysis",
-                     "It's Called a Watch List for a Reason",
-                     "Nissan, Ford, BMW Sue Takata Over Faulty Airbag Losses",
-                     "Goodyear Shares Concepts, Technology for Urban Mobility at Geneva International Motor Show",
-                     "Vetr Downgrades Regeneron Off Of Share Rise",
-                     "Nucor Corp. breached its 50 day moving average in a Bullish  Manner : NUE-US : March 9, 2017",
-                     "Top 5 Themes From Deutsche Bank's Media, Telecom Conference",
-                     "Recent Western Digital Weakness A Buying Opportunity: Benchmark"]
-    var ticker = ["Ticker",
-                  "BAC",
-                  "GE",
-                  "T",
-                  "NVDA",
-                  "INTC",
-                  "FCX",
-                  "CSCO",
-                  "ATVI",
-                  "CHK",
-                  "F",
-                  "GT",
-                  "REGN",
-                  "NUE",
-                  "CCI",
-                  "STX"]
-    var volume = ["Volume",
-                  "18832081",
-                  "135418",
-                  "46584367",
-                  "2493055",
-                  "168718",
-                  "224224",
-                  "20141259",
-                  "1118026",
-                  "423154",
-                  "1417693",
-                  "445795",
-                  "150046316",
-                  "425217",
-                  "1417693",
-                  "20141259"]
-    
-    //create arbitrary items for data set
-    func createitems() -> [NewsData] {
-        var items = [NewsData]()
-        
-        var count: Int = 0
-        for _ in ticker {
-            items.append(NewsData(time: time[count], headline: headlines[count], ticker: ticker[count], volume: volume[count], articleLink: articleURL[count]))
-            count = count + 1
+    /*
+        This function will be used to fetch our data from the json
+    */
+    func fetchData() {
+        let url = URL(string: "http://ec2-54-201-191-25.us-west-2.compute.amazonaws.com/cgi-bin/pressboard.py")
+        let task = URLSession.shared.dataTask(with: url!) {(data: Data?, response: URLResponse?, error: Error?) in
+            if error != nil {
+                print("Error")
+                return
+            } else {
+                self.newsData = [NewsData]()
+                if let content = data {
+                    do {
+                        //Array
+                        let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as? [[String: String]]
+                        
+                        //place section titles
+                        let titleData = NewsData()
+                        titleData.ticker = "Ticker"
+                        titleData.time = "Time"
+                        titleData.openPrice = "Open Price"
+                        titleData.descript = "Description"
+                        titleData.headline = "Headline"
+                        titleData.articleLink = "URL"
+                        self.newsData.append(titleData)
+                        
+                        for items in myJson! {
+                            let press = NewsData()
+                            if let openPrices = items["open_price"], let descrip = items["description"], let ticker = items["ticker"], let title = items["title"], let time = items["time"], let url = items["url"] {
+                                
+                                press.ticker = ticker
+                                press.time = time
+                                press.openPrice = openPrices
+                                press.descript = descrip
+                                press.headline = title
+                                press.articleLink = url
+                            }
+                            self.newsData.append(press)
+                        }
+                        DispatchQueue.main.sync {
+                            self.MyCollectionView.reloadData()
+                        }
+                    } catch {
+                        print("error")
+                    }
+                }
+            }
         }
+        task.resume()
+    }
+    
+
+    /*
+        This function determines the amount of rows.
+    */
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return items
+        return self.newsData.count
     }
     
     /*
         This function determines the amount of columns.
     */
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return 4
-    }
-    
-    /*
-        This function determines the amount of rows.
-    */
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
-        return self.newsData.count
-        //return 16
+        return 4
     }
     
     /*
@@ -135,33 +93,31 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MyCollectionViewCell
         
-        cell.myLabel?.text = nil
+        //cell.myLabel?.text = nil
         
         cell.myLabel?.textAlignment = NSTextAlignment.left
-        
-        //set the border for each cell
+        cell.myLabel.textColor = UIColor.white
         cell.layer.borderWidth = 1
-        cell.layer.borderColor = UIColor.black.cgColor
         
-        if indexPath.section == 0 {
+        if indexPath.row == 0 {
             //set the background and text color for the labels
             cell.backgroundColor = UIColor.darkGray
-            cell.myLabel?.textColor = UIColor.white
+            cell.layer.borderColor = UIColor.black.cgColor
         } else {
             //set the background and text color for the other cells
-            cell.backgroundColor = UIColor.white
-            cell.myLabel?.textColor = UIColor.black
+            cell.backgroundColor = UIColor.black
+            cell.layer.borderColor = themeColor.cgColor
         }
         
-        //set the label for each cell
-        if indexPath.row == 0 {
-            cell.myLabel.text = newsData[indexPath.section].time
-        } else if indexPath.row == 1 {
-            cell.myLabel.text = newsData[indexPath.section].headline
-        } else if indexPath.row == 2 {
-            cell.myLabel.text = newsData[indexPath.section].ticker
+        //set the label for each cell straight from json
+        if indexPath.section == 0 {
+            cell.myLabel.text = newsData[indexPath.row]?.time
+        } else if indexPath.section == 1 {
+            cell.myLabel.text = newsData[indexPath.row]?.headline
+        } else if indexPath.section == 2 {
+            cell.myLabel.text = newsData[indexPath.row]?.ticker
         } else {
-            cell.myLabel.text = newsData[indexPath.section].volume
+            cell.myLabel.text = newsData[indexPath.row]?.openPrice
         }
         
         return cell
@@ -171,23 +127,70 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         This function allows the user to see the article in Safari when Headline is pressed
     */
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.section != 0 && indexPath.row == 1 {
-            let url = URL(string: newsData[indexPath.section].articleLink!)
+        if indexPath.row != 0 && indexPath.section == 1 {
+            let cell = MyCollectionView.cellForItem(at: indexPath)
+            cell?.layer.borderWidth = 2.0
+            cell?.layer.backgroundColor = UIColor.gray.cgColor
+            
+            let url = URL(string: (newsData[indexPath.row]?.articleLink!)!)
             UIApplication.shared.open(url!, options: [:], completionHandler: nil)
         }
     }
     
+    /*
+        This function restores the conditions of the cell after it is deselected
+    */
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = MyCollectionView.cellForItem(at: indexPath)
+        cell?.layer.borderWidth = 1
+        cell?.layer.backgroundColor = UIColor.black.cgColor
+    }
+    
+    /*
+        This function allows the user to use the Menu
+    */
     @IBAction func MenuPressed(_ sender: Any) {
         menuManager.openMenu()
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        newsData = createitems()
+        navigationController?.navigationBar.barTintColor = themeColor
+        
+        //preload the Press Release data into collection view
+        fetchData()
+        
         self.automaticallyAdjustsScrollViewInsets = false
+        
+        //show the user the tap on how to read articles when they first log into application
+        let userSeenPage = UserDefaults.standard.bool(forKey: "userSeenPage")
+        if  !userSeenPage{
+            UserDefaults.standard.set(true, forKey: "userSeenPage")
+            UserDefaults.standard.synchronize()
+            let myAlert = UIAlertController(title: "Note", message: "You can tap on the headlines to open the article", preferredStyle: UIAlertControllerStyle.alert)
+            let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default) { action in
+                self.dismiss(animated: true, completion: nil)
+            }
+            myAlert.addAction(okAction)
+            self.present(myAlert, animated: true, completion: nil)
+        }
+        
+        //create a daily notifcation for 7:00am
+        let content = UNMutableNotificationContent()
+        content.title = "FLTR"
+        content.body = "See how the stocks in your watch list are doing"
+        content.sound = UNNotificationSound.default()
+        let currentBadgeNumber = UIApplication.shared.applicationIconBadgeNumber
+        content.badge = NSNumber(value: currentBadgeNumber + 1)
+        var dateComponents = DateComponents()
+        dateComponents.hour = 7
+        dateComponents.minute = 0
+        let triggerDaily = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        let request = UNNotificationRequest(identifier: "any", content: content, trigger: triggerDaily)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
