@@ -12,18 +12,9 @@ class NewsData: NSObject {
     
     var time: String?
     var headline: String?
+    var descript: String?
     var ticker: String?
-    var volume: String?
+    var openPrice: String?
     var articleLink: String?
-    
-    /*
-     Constructor for our NewsData Class
-     */
-    init(time: String, headline: String, ticker: String, volume: String, articleLink: String) {
-        self.time = time
-        self.headline = headline
-        self.ticker = ticker
-        self.volume = volume
-        self.articleLink = articleLink
-    }
+
 }
