@@ -177,7 +177,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
             self.present(myAlert, animated: true, completion: nil)
         }
         
-        //create a daily notifcation for 7:00am
+        //create a daily notifcation for 6:00am
         let content = UNMutableNotificationContent()
         content.title = "FLTR"
         content.body = "See how the stocks in your watch list are doing"
@@ -185,7 +185,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let currentBadgeNumber = UIApplication.shared.applicationIconBadgeNumber
         content.badge = NSNumber(value: currentBadgeNumber + 1)
         var dateComponents = DateComponents()
-        dateComponents.hour = 7
+        dateComponents.hour = 6
         dateComponents.minute = 0
         let triggerDaily = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         let request = UNNotificationRequest(identifier: "any", content: content, trigger: triggerDaily)
