@@ -228,6 +228,9 @@ class WatchlistViewController: UIViewController, UITableViewDelegate, UITableVie
         
         //preload the data into the Rising Stocks table
         fetchData()
+        
+        //reset application badge number to 0 when user views watchlist
+        UIApplication.shared.applicationIconBadgeNumber = 0
     }
     
     override func didReceiveMemoryWarning() {
