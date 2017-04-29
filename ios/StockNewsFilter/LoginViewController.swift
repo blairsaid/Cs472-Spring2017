@@ -18,6 +18,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var signupButton: UIButton!
+    
+    @IBOutlet weak var orLabel: UILabel!
+    
     /*
         This function deletes the placeholder text, for new attempt
     */
@@ -143,9 +147,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         
         let facebookLoginButton = FBSDKLoginButton()
         view.addSubview(facebookLoginButton)
-        facebookLoginButton.frame = CGRect(x: 40, y: 505, width: loginButton.frame.width, height: 30)
+        //facebookLoginButton.frame = CGRect(x: 40, y: 505, width: loginButton.frame.width, height: 30)
+        facebookLoginButton.frame = CGRect(x: loginButton.frame.origin.x, y: (loginButton.frame.origin.y + signupButton.frame.origin.y) / 2, width: loginButton.frame.width, height: 30)
         facebookLoginButton.autoresizingMask = [.flexibleWidth, .flexibleLeftMargin, .flexibleRightMargin, .flexibleBottomMargin]
         facebookLoginButton.delegate = self
+        
+        orLabel.frame.origin.y = (loginButton.frame.origin.y + facebookLoginButton.frame.origin.y) / 2
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
