@@ -378,7 +378,9 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="Home" id="KKR-Up-bMm"/>
                     <connections>
                         <outlet property="loginButton" destination="Th1-gK-n87" id="f95-IO-36n"/>
+                        <outlet property="orLabel" destination="Fvv-7G-pU5" id="FON-6r-SKz"/>
                         <outlet property="passwordText" destination="6VZ-8z-iIS" id="Jow-tS-UD5"/>
+                        <outlet property="signupButton" destination="Xff-YG-IZ1" id="fx1-Jx-Ugn"/>
                         <outlet property="usernameText" destination="QlI-Ko-0PT" id="ARX-YS-9Xc"/>
                     </connections>
                 </viewController>
@@ -448,7 +450,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0P-si-pIR">
-                                <rect key="frame" x="42" y="442" width="285" height="30"/>
+                                <rect key="frame" x="42" y="421" width="285" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create an account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -465,7 +467,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odp-Bo-8SZ">
-                                <rect key="frame" x="42" y="509" width="285" height="30"/>
+                                <rect key="frame" x="42" y="535" width="285" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="I already have an account">
@@ -480,6 +482,7 @@
                     </view>
                     <connections>
                         <outlet property="alreadyUserButton" destination="Odp-Bo-8SZ" id="gSC-hg-NCV"/>
+                        <outlet property="orLabel" destination="Kqb-Cy-kpT" id="dMi-Ul-Pzs"/>
                         <outlet property="registrationButton" destination="T0P-si-pIR" id="swb-7F-RhR"/>
                         <outlet property="repeatPasswordTextField" destination="r5B-iK-ffn" id="c6H-iI-lPO"/>
                         <outlet property="userEmailTextField" destination="zMe-HJ-2Kh" id="4Hs-Do-IoT"/>
