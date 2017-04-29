@@ -16,6 +16,7 @@ class SignupViewController: UIViewController {
     
     @IBOutlet weak var registrationButton: UIButton!
     @IBOutlet weak var alreadyUserButton: UIButton!
+    @IBOutlet weak var orLabel: UILabel!
     
 
     /*
@@ -120,6 +121,8 @@ class SignupViewController: UIViewController {
         userEmailTextField.frame.size.height = 50.0
         userPasswordTextField.frame.size.height = 50.0
         repeatPasswordTextField.frame.size.height = 50.0
+        
+        orLabel.frame.origin.y = (registrationButton.frame.origin.y + alreadyUserButton.frame.origin.y) / 2
     }
 
     override func didReceiveMemoryWarning() {
